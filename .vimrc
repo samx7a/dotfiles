@@ -98,3 +98,5 @@ let g:ycm_autoclose_preview_window_after_completion=1
 " through as a weird null character: ^@
 nnoremap <C-@> :YcmCompleter GoToDefinition<CR> 
 
+" Enable copy and paste from system clipboard
+
