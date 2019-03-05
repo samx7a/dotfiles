@@ -20,7 +20,9 @@ syntax on
 set t_Co=256
 "set background=dark
 colorscheme zenburn
-
+" Show filename in status bar
+set laststatus=2
+set statusline="%f"
 " Git diffs on current buffer vs saved changes
 nnoremap <leader>d :w !diff % -<CR>
 
@@ -49,17 +51,4 @@ nnoremap <C-L> <C-W><C-L>
 " Move to split left
 nnoremap <C-H> <C-W><C-H>
 
-" Run python using f9
-autocmd FileType python nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<CR>
-autocmd FileType python vnoremap <buffer> <f9> :w !python<CR>
-
-
-" YouCompleteMe Customizations
-let g:ycm_autoclose_preview_window_after_completion=1
-"let g:ycm_autoclose_preview_window_after_insertion=0
-
-
-" Map Ctrl-Space to Go to definition. Note that on iterm, ctrl space goes
-" through as a weird null character: ^@
-nnoremap <C-@> :YcmCompleter GoToDefinition<CR> 
 
